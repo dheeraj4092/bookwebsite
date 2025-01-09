@@ -196,30 +196,44 @@ body {
 
 /* Upcoming Books */
 .upcoming {
-    padding: rem 2rem;
-    background: var(--dark-bg);
+    min-height: 100vh; /* Full viewport height */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Match hero gradient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* Match hero text color */
+    padding: calc(var(--nav-height) + 2rem) 1rem 2rem; /* Match hero padding */
 }
+
 
 .upcoming-books {
     display: flex;
     justify-content: center;
     gap: 3rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Responsive layout */
+    margin-top: 2rem;
 }
 
 .book-card {
-    text-align: center;
+    max-width: 300px; /* Similar to .book-cover */
+    background: rgba(45, 55, 72, 0.3); /* Frosted glass effect */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Shadow depth */
     padding: 2rem;
-    background: var(--card-bg);
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    border: 1px solid var(--border-color);
+    text-align: center;
+    border: 1px solid var(--border-color); /* Border */
+    transform: perspective(1000px) rotateY(5deg); /* Perspective effect */
+    transition: transform 0.5s ease; /* Smooth hover effect */
+    color: rgb(255, 255, 255);
 }
 
 .book-card:hover {
-    transform: translateY(-10px);
+    transform: perspective(1000px) rotateY(0deg); /* Interactive hover */
 }
+
+
 
 .countdown {
     margin-top: 1.5rem;
