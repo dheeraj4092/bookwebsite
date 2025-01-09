@@ -9,6 +9,19 @@
     --nav-height: 70px;
     --border-color: #4a5568;
 }
+.nav-logo {
+    height: 50px; /* Adjust the size of the logo */
+    margin-right: 10px; /* Add spacing between the logo and the text */
+    vertical-align: middle; /* Align with the text */
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
 
 * {
     margin: 0;
