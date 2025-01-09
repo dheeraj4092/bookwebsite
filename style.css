@@ -216,14 +216,14 @@ body {
 }
 
 .book-card {
-    max-width: 300px; /* Similar to .book-cover */
+    max-width: 400px; /* Similar to .book-cover */
     background: rgba(45, 55, 72, 0.3); /* Frosted glass effect */
     backdrop-filter: blur(10px); /* Blur effect */
-    border-radius: 15px; /* Rounded corners */
+    border-radius: 20px; /* Rounded corners */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Shadow depth */
     padding: 2rem;
     text-align: center;
-    border: 1px solid var(--border-color); /* Border */
+    border: 2px solid var(--border-color); /* Border */
     transform: perspective(1000px) rotateY(5deg); /* Perspective effect */
     transition: transform 0.5s ease; /* Smooth hover effect */
     color: rgb(255, 255, 255);
