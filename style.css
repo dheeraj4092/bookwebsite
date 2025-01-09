@@ -196,7 +196,7 @@ body {
 
 /* Upcoming Books */
 .upcoming {
-    padding: 5rem 2rem;
+    padding: rem 2rem;
     background: var(--dark-bg);
 }
 
@@ -211,7 +211,7 @@ body {
     text-align: center;
     padding: 2rem;
     background: var(--card-bg);
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     border: 1px solid var(--border-color);
