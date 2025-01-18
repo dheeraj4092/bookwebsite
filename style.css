@@ -482,3 +482,164 @@ footer {
         padding: 0 1rem;
     }
 }
+/* Birthday Section */
+.birthday {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.birthday-heading {
+    font-size: 3rem;
+    color: #d23669;
+    margin-bottom: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.birthday-message {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out 0.5s;
+}
+
+/* Photo Styling */
+.birthday-photo {
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: zoomIn 2s ease-in-out 1s;
+}
+
+.birthday-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Balloons */
+.birthday-animations {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    animation: floatUp 6s infinite ease-in-out;
+}
+
+.balloon:before {
+    content: '';
+    width: 2px;
+    height: 50px;
+    background-color: #666;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.balloon1 {
+    left: 15%;
+    background-color: #ff6347;
+    animation-delay: 0s;
+}
+
+.balloon2 {
+    left: 35%;
+    background-color: #ffd700;
+    animation-delay: 1s;
+}
+
+.balloon3 {
+    left: 55%;
+    background-color: #1e90ff;
+    animation-delay: 2s;
+}
+
+.balloon4 {
+    left: 75%;
+    background-color: #32cd32;
+    animation-delay: 3s;
+}
+
+/* Confetti */
+.confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: confettiFall 3s infinite ease-in-out;
+}
+
+.confetti:nth-child(odd) {
+    background-color: #ff69b4;
+}
+
+.confetti:nth-child(even) {
+    background-color: #ffd700;
+}
+
+/* Animations */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(-300px);
+    }
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

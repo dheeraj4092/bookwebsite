@@ -91,3 +91,27 @@ document.querySelectorAll('section').forEach(section => {
     section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
     observer.observe(section);
 });
+
+// Birthday Logic
+const birthdaySection = document.getElementById('birthday-celebration');
+
+// Author's Birthday (MM-DD)
+const birthday = '01-07'; // Example: January 7th
+const today = new Date();
+const formattedToday = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+if (formattedToday === birthday) {
+    birthdaySection.style.display = 'block';
+
+    // Generate Confetti
+    const confettiContainer = document.querySelector('.confetti-container');
+    for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = `${Math.random() * 100}%`;
+        confetti.style.animationDelay = `${Math.random() * 3}s`;
+        confettiContainer.appendChild(confetti);
+    }
+} else {
+    birthdaySection.style.display = 'none';
+}
